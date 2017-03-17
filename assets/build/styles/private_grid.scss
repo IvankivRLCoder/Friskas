@@ -1,0 +1,22 @@
+.flex-row-class {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column-class {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-around-class {
+    justify-content: space-around;
+}
+
+.flex-between-class {
+    justify-content: space-between;
+}
+
+.flex-center-center-class {
+    align-items: center;
+    justify-content: center;
+}

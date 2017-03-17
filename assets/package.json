@@ -1,0 +1,43 @@
+{
+  "name": "stonnyFront",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Andrew",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-install": "*",
+    "gulp-sass": "*",
+    "gulp-watch": "*",
+    "normalize-scss": "^6.0.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "del": "^2.2.2",
+    "gulp": "*",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^3.1.0",
+    "gulp-image": "^2.7.5",
+    "gulp-install": "^0.6.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "gulp-wrapper": "^1.0.0",
+    "jshint": "^2.9.4"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
