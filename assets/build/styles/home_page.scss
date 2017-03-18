@@ -12,7 +12,7 @@
         .home-page-logo {
             font-size: 25px;
             margin-top: 20px;
-            span:first-child {
+            span:first-child {  
                 color: $prm-col;
             }
             span:nth-child(2) {
@@ -27,7 +27,7 @@
             }
         }
         >div:nth-child(2){
-            color: $prm-col;
+            color: $prm-col;    
             margin: 30px;
             font-size: 20px;
             cursor:pointer;
@@ -35,12 +35,13 @@
         .user-inform{
             text-align: left;
             border-right: 2px solid rgba(153, 153, 153, 0.26);
-            width: 20%;
+            width: 210px;
+            margin-left: 80px;
             >div {
                 display:flex;
                 flex-direction:column;
                 align-items: flex-start;
-                margin: 7px 0;
+                margin: 4px 0;
                 img{
                     background: #00b9ad;
                     width: 100px;
@@ -50,7 +51,7 @@
             span {
                 font-size: 24px;
                 color: $tnd-text-col;
-                padding: 5px 0;
+                padding: 4px 0;
             }
             .user-titel{
                 font-size: 16px;
@@ -59,11 +60,79 @@
             }
         }
         .user-contact-block{
-            width: 40%;
-            div{
-                span {
+            width: 550px;
+            .user-cats-block{
+                margin-top: 25px;
+            }
+            > div{
+                align-items: flex-start;
+                padding-left: 50px;
+                > span {
                 font-size: 24px;
                 color: $prm-col;
+                }
+                .user-friends-block-items{
+                    height: 220px;
+                    width: 500px;
+                    overflow: auto;
+                    align-items: center;
+                    li {
+                        width: 200px;
+                        height: 200px;
+                        display: inline-block;
+                        padding: 5px 5px 0;
+                        border: 1px solid rgba(153, 153, 153, 0.3);
+                        border-radius: $brd-rad;
+                        img{
+                            height: 100%;
+                            width: 100%;
+                        }
+                        > div:first-child{
+                            width: 200px;
+                            height: 160px;
+                        } 
+                        > div:nth-child(2){
+                            text-align: left;
+                            > span{
+                                color: $prm-text-col;
+                                font-size: 16px;
+                            }
+                        }
+                        .user-friends-block-items-inform {
+                                font-size: 14px;
+                                padding-top: 4px;
+                                span:first-child{
+                                    color: $hgl-col;
+                                }
+                                span:nth-child(2){
+                                    color: $prm-col;
+                                }
+                        }
+                    }
+                }
+                .user-cats-block-items{
+                    height: 180px;
+                    width: 500px;
+                    overflow: auto;
+                    align-items: center;
+                    li {
+                        text-align:left;
+                        img{
+                            height: 100%;
+                            width: 100%;
+                        }
+                        div{
+                            width: 250px;
+                            height: 150px; 
+                            border: 1px solid rgba(153, 153, 153, 0.3);
+                            display: inline-block;
+                        }
+                        span {
+                            padding-top: 4px;
+                            font-size: 14px;
+                            color: $hgl-col;
+                        }
+                    }
                 }
             }
         }
