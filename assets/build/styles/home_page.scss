@@ -35,8 +35,7 @@
         .user-inform{
             text-align: left;
             border-right: 2px solid rgba(153, 153, 153, 0.26);
-            width: 210px;
-            margin-left: 80px;
+            width: 300px;
             >div {
                 display:flex;
                 flex-direction:column;
@@ -99,31 +98,32 @@
                             }
                         }
                         .user-friends-block-items-inform {
-                                font-size: 14px;
-                                padding-top: 4px;
-                                span:first-child{
-                                    color: $hgl-col;
-                                }
-                                span:nth-child(2){
-                                    color: $prm-col;
-                                }
+                            font-size: 14px;
+                            padding-top: 4px;
+                            span:first-child{
+                                color: $hgl-col;
+                            }
+                            span:nth-child(2){
+                                color: $prm-col;
+                            }
                         }
                     }
                 }
                 .user-cats-block-items{
                     height: 180px;
-                    width: 500px;
+                    width: 465px;
                     overflow: auto;
                     align-items: center;
                     li {
                         text-align:left;
+                        margin-right: 12px;
                         img{
                             height: 100%;
                             width: 100%;
                         }
                         div{
-                            width: 250px;
-                            height: 150px; 
+                            width: 220px;
+                            height: 130px; 
                             border: 1px solid rgba(153, 153, 153, 0.3);
                             display: inline-block;
                         }

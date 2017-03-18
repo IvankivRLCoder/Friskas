@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <title>CatFriends</title>
     <link rel="stylesheet" href="assets/dest/css/styles.min.css">
-    <script src="assets/dest/js/main.min.js"></script>
+    <script src="assets/dest/js/angular.min.js"></script>
+    <script src="assets/dest/js/main.js"></script>
 </head>
 
-<body>
+<body data-ng-app="WiskasPageApp" data-ng-controller="userCtrl">
     <div class="home-page flex-row-class flex-center-center-class">
         <div>
             <div class="home-page-logo flex-row-class flex-center-center-class">
@@ -19,34 +20,35 @@
                 <span>< Previous user</span>
                 <span>Next user ></span>
             </div>
-            <div class="flex-row-class flex-center-center-class">
+            <div class="flex-row-class flex-center-center-class" ng-repeat='user in users | filter : {id: 1}'>
                 <div class="user-inform flex-column-class">
                     <div>
-                        <img src="" alt="user-foto">
-                        <span>Name Surname</span>
+                        <img src="{{user.img}}" alt="user-foto">
+                        <input type="text" value="{{user.name}}">
+                        <span>{{user.name}} {{user.surname}}</span>
                     </div>
                     <div>
                         <span class="user-titel">Born</span>
-                        <span>11\11\1111</span>
+                        <span>{{user.born}}</span>
                     </div>
                     <div>
                         <span class="user-titel">Gender</span>
-                        <span>male</span>
+                        <span>{{user.gendor}}</span>
                     </div>
                     <div>
                         <span class="user-titel">Phone</span>
-                        <span>098 1 345 345</span>
+                        <span>{{user.phone}}</span>
                     </div>
                     <div>
                         <span class="user-titel">Email</span>
-                        <span>test@gmail.com</span>
+                        <span>{{user.email}}</span>
                     </div>
                 </div>
                 <div class="user-contact-block flex-column-class">
                     <div class="user-frinds-block flex-column-class">
-                        <span>Irene's friends</span>
+                        <span>{{user.name}}'s friends</span>
                         <ul class="user-friends-block-items flex-row-class">
-                            <li>
+                            <li ng-repeat="friend in user.friends">
                                 <div><img src="http://s.pikabu.ru/post_img/2013/12/02/8/1385985936_1683907691.jpg" alt="user-avatar"></div>
                                 <div>
                                     <span>Name Surname</span>
@@ -59,11 +61,11 @@
                         </ul>
                     </div>
                     <div class="user-cats-block flex-column-class">
-                        <span>Irene's cats (2)</span>
+                        <span>{{user.name}}'s cats </span>
                         <ul class="user-cats-block-items flex-row-class">
-                            <li class="flex-column-class">
-                                <div><img src="http://img-fotki.yandex.ru/get/5106/310023662.506/0_13bef7_7e172c01_orig" alt="user-cat"></div>
-                                <span>Name cat</span>
+                            <li class="flex-column-class" ng-repeat="cat in user.cats">
+                                <div><img src="{{cat.img}}" alt="user-cat"></div>
+                                <span>{{cat.name}}</span>
                             </li>
                         </ul>
                     </div>
