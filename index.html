@@ -21,11 +21,34 @@
                 <span>Next user ></span>
             </div>
             <div class="flex-row-class flex-center-center-class" ng-repeat='user in users | filter : {id: 1}'>
-                <section ng-style="myStyle">
-                    <button ng-click="myStyle={'display':'none'}"><img src="assets/dest/img/close-icon.png" alt="close"></button>
+                <section ng-style="myStyle" data-ng-controller="AppController as ctrl" class="flex-center-center-class">
+                    <button class="close-but" ng-click="myStyle={'display':'none'}"><img src="assets/dest/img/close-icon.png" alt="close"></button>
+                    <!--user-name\surname\born\gender\phone\email-->
+                    <form ng-submit="ctrl.submit()" name="myForm" class="form_cont flex-column-class flex-center-center-class">
+                        <input type="hidden" ng-model="ctrl.user.id" />
+                        <label class=" control-lable" for="name">Name</label>
+                        <input type="text" ng-model="ctrl.user.username" id="name" class="username form-control" placeholder="Enter your name" required ng-minlength="3" />
+
+                        <label class="control-lable" for="exampleInputPassword1">Password</label>
+                        <input type="password" ng-model="ctrl.user.password" class="password form-control form-control" id="exampleInputPassword1" placeholder="Password" required ng-minlength="4">
+
+                        <label class="control-lable" for="number">Phone number</label>
+                        <input type="number" ng-model="ctrl.user.number" id="number" value="" class="number form-control" placeholder="Phone number" required ng-minlength="12" />
+
+                        <label class="control-lable" for="country">Country</label>
+                        <input type="text" ng-model="ctrl.user.country" id="country" class="country form-control" required placeholder="Enter your Country." />
+
+                        <label class="control-lable" for="city">City</label>
+                        <input type="text" ng-model="ctrl.user.city" id="city" class=" city form-control" required placeholder="Enter your City." />
+
+                        <label class="control-lable" for="email">Email</label>
+                        <input type="email" ng-model="ctrl.user.email" id="email" class="email form-control" placeholder="Enter your Email" required/>
+
+                        <input type="submit" value="{{!ctrl.user.id ? 'Add' : 'Update'}}" ng-disabled="myForm.$invalid">
+                        <button type="button" ng-click="ctrl.reset()" ng-disabled="myForm.$pristine">Reset Form</button>
                 </section>
                 <div class="user-inform flex-column-class">
-                    <button ng-click="myStyle={'display':'block'}"><img src="assets/dest/img/profile-icon.png" alt=""></button>
+                    <button ng-click="myStyle={'display':'flex'}"><img src="assets/dest/img/profile-icon.png" alt="profile"></button>
                     <div>
                         <img src="{{user.img}}" alt="user-foto">
                         <span>{{user.name}} {{user.surname}}</span>
@@ -36,7 +59,7 @@
                     </div>
                     <div>
                         <span class="user-titel">Gender</span>
-                        <span>{{user.gendor}}</span>
+                        <span>{{user.gender}}</span>
                     </div>
                     <div>
                         <span class="user-titel">Phone</span>
