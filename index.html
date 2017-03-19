@@ -21,10 +21,13 @@
                 <span>Next user ></span>
             </div>
             <div class="flex-row-class flex-center-center-class" ng-repeat='user in users | filter : {id: 1}'>
+                <section ng-style="myStyle">
+                    <button ng-click="myStyle={'display':'none'}"><img src="assets/dest/img/close-icon.png" alt="close"></button>
+                </section>
                 <div class="user-inform flex-column-class">
+                    <button ng-click="myStyle={'display':'block'}"><img src="assets/dest/img/profile-icon.png" alt=""></button>
                     <div>
                         <img src="{{user.img}}" alt="user-foto">
-                        <input type="text" value="{{user.name}}">
                         <span>{{user.name}} {{user.surname}}</span>
                     </div>
                     <div>
