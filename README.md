@@ -9,9 +9,9 @@ CatFriends is a social network for meeting people who have cats.
 
 ##Style guide :
 - `assets/build/styles/home_page.scss`
-#№Style variable:
+##Style variable:
 - `assets/build/styles/variables.scss`
-#№Style private grid:
+##Style private grid:
 - `assets/build/styles/private_grid.scss`
 
 ##Config main :
